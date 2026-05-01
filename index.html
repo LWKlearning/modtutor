@@ -6,6 +6,7 @@
     <title>MOD_MANUAL - LWK_OS</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        
         :root {
             --neon: #00ff41;
             --bright-neon: #39ff14;
@@ -24,7 +25,32 @@
             scroll-behavior: smooth;
             text-transform: uppercase;
         }
+/* Custom Scrollbar Styling */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--neon) var(--bg);
+}
 
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #000;
+    border-left: 1px solid var(--mid-neon);
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--mid-neon);
+    border: 2px solid #000;
+    transition: background 0.3s;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: var(--neon);
+    box-shadow: 0 0 10px var(--neon);
+}
         .scanlines::before {
             content: " "; display: block; position: absolute; top: 0; left: 0; bottom: 0; right: 0;
             background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%), 
