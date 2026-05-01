@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPLINK // ONBOARDING</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --neon: #00ff41;
+            --low-neon: #003b00;
+            --warn: #ff0000;
+            --bg: #050505;
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--neon);
+            font-family: 'Courier New', monospace;
+            text-transform: uppercase;
+        }
+        .scanlines::before {
+            content: " "; display: block; position: absolute; top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.05), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.05));
+            z-index: 100; background-size: 100% 3px, 3px 100%; pointer-events: none;
+            position: fixed;
+        }
+        .border-glow { border: 1px solid var(--low-neon); box-shadow: 0 0 10px rgba(0, 255, 65, 0.1); }
+        .btn-action { 
+            background: var(--low-neon); 
+            border: 1px solid var(--neon); 
+            padding: 10px; 
+            transition: 0.3s; 
+            text-align: center;
+            display: block;
+        }
+        .btn-action:hover { background: var(--neon); color: #000; box-shadow: 0 0 15px var(--neon); }
+        .cred-box { background: rgba(0, 255, 65, 0.05); border: 1px dashed var(--neon); padding: 15px; }
+        .video-summary { font-size: 0.75rem; color: #888; margin-top: 5px; text-transform: none; }
+    </style>
+</head>
+<body class="scanlines p-4 md:p-10">
+
+    <div class="max-w-3xl mx-auto border-glow p-6 bg-black/80">
+        <!-- Header -->
+        <div class="flex justify-between items-start border-b border-green-900 pb-4 mb-6">
+            <div>
+                <h1 class="text-2xl font-bold tracking-tighter">WELCOME_TO_THE_NETWORK</h1>
+                <p class="text-xs opacity-60">Status: Uplink_Established // Level: Moderator</p>
+            </div>
+            <div class="text-right text-[10px]">
+                [ CLASSIFIED DOCUMENT ]<br>
+                REF_ID: MOD_ONBOARD_v2
+            </div>
+        </div>
+
+        <!-- Credentials Section -->
+        <div class="mb-8">
+            <h2 class="text-white mb-3">01. ACCESS_KEYS</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-black border border-green-900 p-4">
+                    <label class="text-[10px] text-green-800">USERNAME</label>
+                    <div class="text-lg font-bold border-b border-green-900 mb-4">[ INSERT_USER ]</div>
+                    
+                    <label class="text-[10px] text-green-800">PASSWORD</label>
+                    <div class="text-lg font-bold border-b border-green-900">[ INSERT_PASS ]</div>
+                </div>
+                <div class="cred-box flex flex-col justify-center text-center">
+                    <div class="text-2xl font-bold">1 SHARE</div>
+                    <div class="text-xs">= 5 CREDITS</div>
+                    <p class="text-[9px] mt-2 text-white opacity-70">Use credits to trigger Glitch, Invert, or Broadcast Message effects.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Briefing / Tutorials -->
+        <div class="mb-8">
+            <h2 class="text-white mb-3">02. FIELD_TRAINING</h2>
+            <div class="space-y-4">
+                <!-- Tutorial 1 -->
+                <div class="border border-green-900 p-3">
+                    <a href="https://youtu.be/OyaxR-tueQU" target="_blank" class="text-white hover:underline font-bold">[VOD_01]: SYSTEM_TUTORIAL</a>
+                    <div class="video-summary">
+                        <strong>Summary:</strong> High-level walkthrough of the Moderator UI. Explains how to authenticate, check your token balance, and execute basic commands. Essential for first-time login.
+                    </div>
+                </div>
+                <!-- Tutorial 2 -->
+                <div class="border border-green-900 p-3">
+                    <a href="https://youtu.be/7llJKc7bcaM" target="_blank" class="text-white hover:underline font-bold">[VOD_02]: CAPABILITY_SHOWCASE</a>
+                    <div class="video-summary">
+                        <strong>Summary:</strong> Demonstrates real-time effects (Glitch, Boom, Invert) from the perspective of the user. Watch this to see the "Impact" your commands have on the network.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="mb-8">
+            <h2 class="text-white mb-3">03. TERMINAL_LINKS</h2>
+            <div class="grid grid-cols-1 gap-2">
+                <a href="https://lwklearning.github.io/moderators/" class="btn-action">GO_TO_DASHBOARD</a>
+                <a href="https://discord.gg/5A6HaQEvTc" class="btn-action">JOIN_DISCORD_COMMS</a>
+            </div>
+        </div>
+
+        <!-- Footer Note -->
+        <div class="border-t border-green-900 pt-4 text-[10px] leading-relaxed opacity-60">
+            <p>TIP: IF DASHBOARD IS BLOCKED, OPEN ANY BACKUP SITE AND TYPE "ADMIN" TO SUMMON THE HIDDEN OVERLAY.</p>
+            <p class="mt-2">UNAUTHORIZED ACCESS IS PROHIBITED. ALL COMMANDS LOGGED BY IP.</p>
+        </div>
+    </div>
+
+</body>
+</html>
